@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.faizanahmed.footybrain.ui.navigation.AppTopBar
 
 @Composable
 fun CategoryScreen(onCategorySelected: (String) -> Unit) {
@@ -18,7 +19,7 @@ fun CategoryScreen(onCategorySelected: (String) -> Unit) {
     */
 
     Scaffold(
-        topBar = { AppTopBar("Choose a category) },
+        topBar = { AppTopBar("Choose a category") },
         contentWindowInsets = WindowInsets.safeDrawing // respects the status + nav bars
     ) { innerPadding ->
         Column(
