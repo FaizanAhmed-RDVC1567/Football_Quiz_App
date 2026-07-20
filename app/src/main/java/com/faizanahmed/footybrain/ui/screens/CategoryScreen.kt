@@ -22,5 +22,9 @@ fun CategoryScreen(onCategorySelected: (String) -> Unit) {
         Button(onClick = { onCategorySelected("clubs") }, modifier = Modifier.fillMaxWidth()) {
             Text("Clubs")
         }
+        Spacer(modifier = Modifier.height(8.dp))
+        Button(onClick = { onCategorySelected("stadiums") }, modifier = Modifier.fillMaxWidth()) {
+            Text("Stadiums")
+        }
     }
 }
