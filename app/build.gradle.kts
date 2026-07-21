@@ -1,3 +1,37 @@
+import java.io.ByteArrayOutputStream
+
+/*
+Function to count total commits (used as an automated Version Code).
+Needs to use Gradle's Project interface rather than being standalone
+detached functions
+*/
+fun Project.getGitCommitCount(): Int {
+    return try {
+        val stdout = ByteArrayOutputStream()
+        providers.exec {
+            commandLine("git", "rev-list", "--count", "HEAD")
+            standardOutput = stdout
+        }.result.get() // Forces execution synchronously
+        stdout.toString().trim().toInt()
+    } catch (e: Exception) {
+        1 // Fallback if Git is missing or not initialised
+    }
+}
+
+// Function to get the short Git commit hash (7 hex characters)
+fun Project.getGitCommitHash(): String {
+    return try {
+        val stdout = ByteArrayOutputStream()
+        providers.exec {
+            commandLine("git", "rev-parse", "--short", "HEAD")
+            standardOutput = stdout
+        }.result.get()  // Forces execution synchronously
+        stdout.toString().trim()
+    } catch (e: Exception) {
+        "unknown" // Fallback
+    }
+}
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -15,8 +49,8 @@ android {
         applicationId = "com.faizanahmed.footybrain"
         minSdk = 28
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 1  // Here the function call 'getGitCommitCount()' will be called and assigned
+        versionName = "0.1.0" // Here, after the last digit, 'getGitCommitHash()' will be called inside braces
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
