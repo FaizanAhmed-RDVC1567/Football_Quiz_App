@@ -50,7 +50,7 @@ android {
         minSdk = 28
         targetSdk = 36
         versionCode = 1  // Here the function call 'getGitCommitCount()' will be called and assigned
-        versionName = "0.1.0" // Here, after the last digit, 'getGitCommitHash()' will be called inside braces
+        versionName = "0.1.5" // Here, after the last digit, 'getGitCommitHash()' will be called inside braces
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
