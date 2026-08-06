@@ -7,6 +7,8 @@ four different options.
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
+2. [Installation](installation)
+3. [App Features](app-features)
 
 ## Prerequisites
 
@@ -18,5 +20,15 @@ four different options.
 - Emulator or physical device with Android version 9.0 or over (Developer options must be enabled).
 
 ## Installation
+
+Follow the steps below for a smooth install:
+
+1. Clone the repo locally.
+2. Open the project folder in Android Studio.
+3. Sync the project to download all relevant dependencies.
+4. Build the project
+     - If you plan on using an emulator, select your preferred device and deploy the app on it.
+     - If you have a physical device connected, select it instead.
+5. If, for any reason, some tools are missing on your device, install the necessary tools and try again.
 
 ## App Features
