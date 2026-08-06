@@ -5,6 +5,7 @@ something for the casual user to enjoy. The questions appear in the form of just
 four different options.
 
 ## Table of Contents
+
 <ol>
 	<li> [Prerequisites](#prerequisites) </li>
 </ol>
