@@ -6,11 +6,16 @@ four different options.
 
 ## Table of Contents
 
-<ol>
-	<li> [Prerequisites](#prerequisites) </li>
-</ol>
+1. [Prerequisites](#prerequisites)
 
 ## Prerequisites
+
+- Java JDK 17 or later installed on your local machine.
+- Environment variable 'JAVA_HOME' must be set (java --version & javac -version must give info about installed JDK).
+- A version control system (preferably Git) installed on your machine.
+- Android Studio installed and up-to-date.
+- Up-to-date SDK build tools for compiling and debugging.
+- Emulator or physical device with Android version 9.0 or over (Developer options must be enabled).
 
 ## Installation
 
